@@ -7,11 +7,20 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'hello_vue' %>
+
   </head>
 
   <body>
-    <div id="app"></div>
-    <%= yield %>
+    <header>
+      <%= render 'layouts/navbar' %>
+    </header>
+    <hr>
+    <div id="content">
+      <%= yield %>
+    </div>
+    <hr>
+    <footer>
+      <p>Author: Zika<br>
+    </footer>
   </body>
 </html>
